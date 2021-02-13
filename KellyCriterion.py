@@ -30,7 +30,10 @@ drift = S0 * np.exp(mu*t)
 
 # generate simulated stock history
 # set up time step loop
-# calculate leveraged position and equity at each time step based on f
+for i in np.arange(0,t.size):
+    #position = f * S[i]
+    #cash = prevPos + cash
+    # calculate leveraged position and equity at each time step based on f
 
 plt.figure()
 plt.plot(t,S)
