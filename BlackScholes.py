@@ -4,23 +4,23 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import special
 
-#S_low = 150.0
-#S_high = 220.0
-#dS = 1.0
-#K = 190.0
-#T = 0.45
-#dt = 0.1
-#r = 0.001
-#sigma = 0.9
-
-S_low = 70.0
-S_high = 130.0
+S_low = 150.0
+S_high = 220.0
 dS = 1.0
-K = 100.0
-T = 1.0
+K = 190.0
+T = 0.45
 dt = 0.1
-r = 0.12
-sigma = 0.1
+r = 0.001
+sigma = 0.9
+
+#S_low = 70.0
+#S_high = 130.0
+#dS = 1.0
+#K = 100.0
+#T = 1.0
+#dt = 0.1
+#r = 0.12
+#sigma = 0.1
 
 t = np.arange(0.0, T, dt)
 S = np.arange(S_low, S_high, dS)
