@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import special
 
+# Test 1
 S_low = 150.0
 S_high = 220.0
 dS = 1.0
@@ -13,6 +14,7 @@ dt = 0.1
 r = 0.001
 sigma = 0.9
 
+# Test 2
 #S_low = 70.0
 #S_high = 130.0
 #dS = 1.0
@@ -22,10 +24,12 @@ sigma = 0.9
 #r = 0.12
 #sigma = 0.1
 
+# Define arrays
 t = np.arange(0.0, T, dt)
 S = np.arange(S_low, S_high, dS)
 t, S = np.meshgrid(t, S)
 
+# Do calculation
 d1 = ( np.log(S/K) + (r + 0.5*(sigma**2))*(T-t) ) / ( sigma*np.sqrt(T-t) )
 d2 = ( np.log(S/K) + (r - 0.5*(sigma**2))*(T-t) ) / ( sigma*np.sqrt(T-t) )
 
@@ -37,6 +41,7 @@ Phi2_put = 0.5*(special.erf(-d2/np.sqrt(2.0)) + 1.0)
 V_call = S*Phi1_call - K*np.exp(-r*(T-t))*Phi2_call
 V_put = K*np.exp(-r*(T-t))*Phi2_put - S*Phi1_put
 
+# Set negative results to zero
 call_zeros = V_call < 0.0
 V_call[call_zeros] = 0.0
 

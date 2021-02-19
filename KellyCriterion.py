@@ -5,6 +5,7 @@ import numpy as np
 
 # Single asset
 
+# Define parameters
 T = 1.0
 dt = 0.001
 t = np.arange(0.0, T, dt)
@@ -35,6 +36,7 @@ for i in np.arange(0,t.size):
     #cash = prevPos + cash
     # calculate leveraged position and equity at each time step based on f
 
+# Plot results
 plt.figure()
 plt.plot(t,S)
 plt.plot(t,drift)
