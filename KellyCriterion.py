@@ -33,7 +33,7 @@ for i in np.arange(1,num_ts):
   V_c = (1 - f) * V_tot
   V[i,0] = V_i
   V[i,1] = V_c
-  V[i,2] = V_tot
+  V[i,2] = V_tot  # This is increasing exponentially, has to do with V_i calculation
 
 # Plot results
 plt.figure()
