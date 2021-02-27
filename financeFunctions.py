@@ -2,6 +2,8 @@
 
 import numpy as np
 
+# Simulate stock data
+
 def gbmSimulation(num_ts, mu, sigma, S0 = 1.0):
     sigma2 = sigma * sigma
     drift = mu - 0.5*sigma2
