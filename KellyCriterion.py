@@ -24,7 +24,6 @@ S = ff.gbmSimulation(num_ts, mu, sigma)
 
 V = np.zeros((num_ts,3))
 V[0,0] = V_i
-V[0,1] = V_c
 V[0,2] = V_i + V_c
 for i in np.arange(1,num_ts):
   V_i = V_i * S[i,1]
@@ -33,13 +32,13 @@ for i in np.arange(1,num_ts):
   V_c = (1 - f) * V_tot
   V[i,0] = V_i
   V[i,1] = V_c
-  V[i,2] = V_tot  # This is increasing exponentially, has to do with V_i calculation
+  V[i,2] = V_tot
 
 # Plot results
 plt.figure()
 plt.plot(t,S[:,0])
 plt.figure()
-plt.plot(t,S[:,1])
+plt.plot(t[1:num_ts-1],S[1:num_ts-1,1])
 plt.figure()
 plt.plot(t,V[:,2])
 plt.show()

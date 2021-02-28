@@ -18,6 +18,6 @@ def gbmSimulation(num_ts, mu, sigma, S0 = 1.0):
         S[i,2] = S[i-1,2] + N[i-1]
         pctChange = np.exp( (drift*i) + (sigma*S[i,2]) )
         S[i,0] = S0 * pctChange
-        S[i,1] = pctChange
+        S[i,1] = S[i,0] / S[i-1,0]
 
     return S
