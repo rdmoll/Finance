@@ -7,7 +7,7 @@ import financeFunctions as ff
 # Single asset
 
 num_ts = 100
-mu = 0.0075
+mu = 0.009
 sigma = 0.06
 r = 0.0085
 
@@ -22,16 +22,13 @@ V_i = f * V_c
 t = np.arange(num_ts)
 S = ff.gbmSimulation(num_ts, mu, sigma)
 
-V1 = ff.kellySimulation(f, S, V_i, V_c)
-V2 = ff.kellySimulation(0.5*f, S, V_i, V_c)
+V1 = ff.kellySimulation(0.5*f, S, V_i, V_c)
+V2 = ff.kellySimulation(1.0*f, S, V_i, V_c)
 V3 = ff.kellySimulation(1.5*f, S, V_i, V_c)
 
 # Plot results
-#plt.figure()
-#plt.plot(t,S[:,0])
-#plt.figure()
-#plt.plot(t[1:num_ts-1],S[1:num_ts-1,1])
-
+plt.figure()
+plt.plot(t,S[:,0])
 plt.figure()
 plt.plot(t,V1[:,2])
 plt.plot(t,V2[:,2])
