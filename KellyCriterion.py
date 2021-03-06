@@ -28,7 +28,8 @@ V3 = ff.kellySimulation(1.5*f, S, V_i, V_c)
 
 # Plot results
 plt.figure()
-plt.plot(t,S[:,0])
+plt.plot(t,S)
+
 plt.figure()
 plt.plot(t,V1[:,2])
 plt.plot(t,V2[:,2])
