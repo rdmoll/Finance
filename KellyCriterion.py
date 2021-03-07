@@ -26,6 +26,8 @@ V1 = ff.kellySimulation(0.5*f, S, V_i, V_c)
 V2 = ff.kellySimulation(1.0*f, S, V_i, V_c)
 V3 = ff.kellySimulation(1.5*f, S, V_i, V_c)
 
+# Multi asset
+
 # Plot results
 plt.figure()
 plt.plot(t,S)
