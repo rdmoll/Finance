@@ -37,3 +37,6 @@ def kellySimulation(f, S, V_i, V_c):
     V[i,2] = V_tot
   
   return V
+  
+def qpSolver( A ):
+  return A
