@@ -28,6 +28,8 @@ V3 = ff.kellySimulation(1.5*f, S, V_i, V_c)
 
 # Multi asset
 
+# Fit growth rate to random data
+
 # Plot results
 plt.figure()
 plt.plot(t,S)

@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import special
 
+# Set Parameters
 # Test 1
 S_low = 150.0
 S_high = 220.0
